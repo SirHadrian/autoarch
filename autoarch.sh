@@ -10,12 +10,16 @@ read -rp "Do you want start the installation? (Y/n)" answer
 doInstall=${answer:-Y}
 
 case $doInstall in
-[Yy]) echo "Install started...";;
-[Nn]) exit 0 ;;
-*)
-	echo "Incorrect option"
-	exit 1
-	;;
+  [Yy]) 
+    echo "Install started..."
+    ;;
+  [Nn]) 
+    exit 0
+    ;;
+  *)
+    echo "Incorrect option"
+    exit 1
+    ;;
 esac
 
 # Verify boot mode
